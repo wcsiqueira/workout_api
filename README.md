@@ -1,3 +1,43 @@
+
+#  Resolução do Desafio Resumo :
+
+**Primeira solicitação Query Parameters: Adicionados aos endpoints de consulta ,modificação em centro_treinamento/routers.py:Adicionamos nome e cpf como parâmetros opcionais na consulta (query),filtro Condicional: Usamos or_ para combinar filtros baseados nos parâmetros ,paginação  feita a adição dos parâmetros limit e offset para paginar os resultado
+
+**Segunda solicitação Resposta Customizada: Definidos novos schemas e ajustados os endpoints para retornar a resposta customizada.
+Modificação em centro_treinamento/schemas.py : Definir os schemas customizados de resposta
+
+**Tereira Solicitação Exceção de Integridade: Manipulada e personalizada para retornar uma mensagem específica.
+
+** Quarta Solicitação Paginação: Implementada usando a biblioteca fastapi-pagination
+Modificação em centro_treinamento/routers.py
+
+Paginação já foi adicionada nas alterações do endpoint query.
+Ajustes no Modelo AtletaModel e CentroTreinamentoModel
+Modificação em atleta/models.py adicione os campos nome, cpf, e categoria no modelo AtletaModel.
+
+Obs: Foi necessário um ajuste : Modificação em centro_treinamento/models.py 
+Assegurar que CentroTreinamentoModel tem o relacionamento correto com AtletaModel.
+
+# Estrutura resolução desafio :
+workout_api/
+    contrib/
+        __init__.py
+        schemas.py
+        router.py
+         main.py
+    centro_treinamento/
+        __init__.py
+        models.py
+        schemas.py
+        views.py
+    atleta/
+        __init__.py
+        models.py
+        schemas.py
+        views.py
+
+
+
 # FastAPI
 ### Quem é o FastAPi?
 Framework FastAPI, alta performance, fácil de aprender, fácil de codar, pronto para produção.
@@ -54,11 +94,16 @@ make run
 ```
 e acesse: http://127.0.0.1:8000/docs
 
+
+   
+
+
 # Desafio Final
     - adicionar query parameters nos endpoints
         - atleta
             - nome
             - cpf
+            - 
     - customizar response de retorno de endpoints
         - get all
             - atleta
