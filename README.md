@@ -18,26 +18,29 @@ Modificação em atleta/models.py adicione os campos nome, cpf, e categoria no m
 Obs: Foi necessário um ajuste : Modificação em centro_treinamento/models.py 
 Assegurar que CentroTreinamentoModel tem o relacionamento correto com AtletaModel.
 
-# Estrutura resolução desafio :
-workout_api/
-    contrib/
-        __init__.py
-        schemas.py
-        router.py
-         main.py
-    centro_treinamento/
-        __init__.py
-        models.py
-        schemas.py
-        views.py
-    atleta/
-        __init__.py
-        models.py
-        schemas.py
-        views.py
+```shell
+  $Arvoré de arquivos 
+  .
+  workout_api
+├── atleta
+│   ├── __init__.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── views.py
+├── centro_treinamento
+│   ├── __init__.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── views.py
+├── contrib
+│   ├── __init__.py
+│   ├── main.py
+│   ├── router.py
+│   └── schemas.py
+└── README.md
 
 
-
+```
 # FastAPI
 ### Quem é o FastAPi?
 Framework FastAPI, alta performance, fácil de aprender, fácil de codar, pronto para produção.
